@@ -1,0 +1,4 @@
+FROM openjdk:11
+ADD build/libs/devchallenge-0.0.1-SNAPSHOT.jar docker-spring-boot-rsh.jar
+EXPOSE 80
+ENTRYPOINT ["java", "-jar", "docker-spring-boot-rsh.jar"]
