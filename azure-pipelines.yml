@@ -12,9 +12,7 @@ pool:
 
 steps:
 - script: 
-  - ./gradlew clean build 
-  echo Hello, world!
-  displayName: 'Run a one-line script'
+  buildpath: './gradlew clean build' 
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
