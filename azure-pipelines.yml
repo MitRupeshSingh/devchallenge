@@ -4,7 +4,6 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
 - task3docker
 - task2
 
@@ -12,7 +11,9 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-- script: echo Hello, world!
+- script: 
+  - ./gradlew clean build 
+  echo Hello, world!
   displayName: 'Run a one-line script'
 
 - script: |
